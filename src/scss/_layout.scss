@@ -1,0 +1,39 @@
+.main {
+  .hero-section {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./image/bg.png");
+    background-size: 300px;
+    background-attachment: fixed;
+    &__title {
+      position: absolute;
+      top: 50%;
+      left: 10vw;
+      font-size: 8.6vw;
+      line-height: 1.1;
+      font-weight: bold;
+      background:inherit;
+      -webkit-background-clip: text;
+      -webkit-filter: invert(100%);
+      color: rgba(0,0,0,.75);
+      transform: translateY(-50%);
+    }
+    &:after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      border-left: 1px solid rgba(255,255,255,.75);
+      border-bottom: 1px solid rgba(255,255,255,.75);
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-45deg);
+      animation: scroll-down 1200ms infinite ease alternate;
+    }
+  }
+
+  .about-section {
+    width: 100%;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap);
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@-webkit-keyframes scroll-down {
+  0% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+.heading-1 {
+  font-size: 64px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.heading-2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.btnRounded {
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 214px;
+  height: 70px;
+  border-radius: 70px;
+  background-color: #FFFFFF;
+  color: #5800FF;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btnRounded:active {
+  transform: translateY(1px);
+}
+.btnRounded:hover {
+  background-color: #5800FF;
+  color: #FFFFFF;
+}
+.btnRounded[disabled] {
+  background-color: #4B4B4B;
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.btnSelectAndPlay {
+  position: relative;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 73px;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  background-color: #3C3C3C;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 10px;
+  transition: all 500ms;
+  cursor: pointer;
+}
+.btnSelectAndPlay:hover {
+  background-color: #4B4B4B;
+}
+.btnSelectAndPlay:hover .btnSelectAndPlay__demo {
+  display: block;
+}
+.btnSelectAndPlay.is-selected {
+  background-color: #5800FF;
+  color: #FFFFFF;
+}
+.btnSelectAndPlay.is-selected .btnSelectAndPlay__demo {
+  border: 1px solid #FFFFFF;
+}
+.btnSelectAndPlay__demo {
+  display: none;
+  position: relative;
+  content: "";
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: #5800FF;
+}
+.btnSelectAndPlay__demo:before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 14px;
+  margin-left: 2px;
+  background-image: url("./media/image/icon_play.svg");
+  background-size: contain;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+}
+.btnSelectAndPlay__demo.is-play {
+  display: block;
+}
+.btnSelectAndPlay__demo.is-play:before {
+  background-image: url("./media/image/icon_pause.svg");
+  margin-left: 1px;
+}
+
+.btnOutlined {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 44px;
+  background-color: transparent;
+  border: 1px solid #C1C1C1;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.btnOutlined:hover {
+  background-color: #4B4B4B;
+}
+
+.checkBoxOneline {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.checkBoxOneline input {
+  display: none;
+}
+.checkBoxOneline input:checked + p:before {
+  background-color: #5800FF;
+}
+.checkBoxOneline input:checked + p:after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 10px;
+  height: 4.5px;
+  border-left: 2px solid #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+  transform: rotate(-45deg);
+}
+.checkBoxOneline p {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #C3C3C3;
+}
+.checkBoxOneline p:before {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 23px;
+  background-color: #4B4B4B;
+  border-radius: 3px;
+  margin: 0 15px 0 0;
+}
+
+.main .hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./image/bg.png");
+  background-size: 300px;
+  background-attachment: fixed;
+}
+.main .hero-section__title {
+  position: absolute;
+  top: 50%;
+  left: 10vw;
+  font-size: 8.6vw;
+  line-height: 1.1;
+  font-weight: bold;
+  background: inherit;
+  -webkit-background-clip: text;
+  -webkit-filter: invert(100%);
+  color: rgba(0, 0, 0, 0.75);
+  transform: translateY(-50%);
+}
+.main .hero-section:after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border-left: 1px solid rgba(255, 255, 255, 0.75);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg);
+  -webkit-animation: scroll-down 1200ms infinite ease alternate;
+          animation: scroll-down 1200ms infinite ease alternate;
+}
+.main .about-section {
+  width: 100%;
+  height: 100vh;
+}
