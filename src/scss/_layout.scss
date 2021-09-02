@@ -12,11 +12,13 @@
       font-size: 8.6vw;
       line-height: 1.1;
       font-weight: bold;
-      background:inherit;
-      -webkit-background-clip: text;
-      -webkit-filter: invert(100%);
-      color: rgba(0,0,0,.75);
+      color: $color-white;
+      //background:inherit;
+      //-webkit-background-clip: text;
+      //-webkit-filter: invert(100%);
+      //color: rgba(0,0,0,.75);
       transform: translateY(-50%);
+      backdrop-filter: grayscale(1);
     }
     &:after {
       content: '';

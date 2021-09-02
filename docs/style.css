@@ -100,11 +100,10 @@ body {
   font-size: 8.6vw;
   line-height: 1.1;
   font-weight: bold;
-  background: inherit;
-  -webkit-background-clip: text;
-  -webkit-filter: invert(100%);
-  color: rgba(0, 0, 0, 0.75);
+  color: #FFFFFF;
   transform: translateY(-50%);
+  -webkit-backdrop-filter: grayscale(1);
+          backdrop-filter: grayscale(1);
 }
 .main .hero-section:after {
   content: "";
