@@ -22,8 +22,8 @@
       content: '';
       width: 40px;
       height: 40px;
-      border-left: 1px solid rgba(255,255,255,.75);
-      border-bottom: 1px solid rgba(255,255,255,.75);
+      border-left: 2px solid rgba(255,255,255,.75);
+      border-bottom: 2px solid rgba(255,255,255,.75);
       position: absolute;
       bottom: 40px;
       left: 50%;
@@ -49,13 +49,32 @@
       display: flex;
       margin: 0 0 40px;
       justify-content: center;
+      align-items: center;
+      p {
+        font-size: 64px;
+        a {
+          color: $color-black;
+          text-decoration: none;
+          &:visited {
+            color: $color-black;
+          }
+          img {
+            height: 80px;
+          }
+        }
+      }
     }
     &__project {
-      padding: 0 80px 40px;
+      padding: 0 40px 40px;
+      margin: 0 auto;
+      max-width: 860px;
+      text-align: center;
       p {
         font-size: 24px;
         line-height: 30px;
+        letter-spacing: 0.06em;
         color: $color-black;
+        margin: 0 0 20px;
         &.note {
           font-size: 18px;
           color: $color-gray-4;
@@ -76,48 +95,149 @@
     padding: 80px 0;
     &__title {
       font-size: 96px;
+      font-weight: 300;
       text-align: center;
     }
     &__buy {
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 40px 0 0;
+      img {
+        height: 50px;
+      }
+      span {
+        font-size: 20px;
+        display: block;
+        padding: 0 10px;
+      }
     }
     &__request {
+      margin: 40px 0 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-transform: uppercase;
+      p {
+        margin: 0 0 10px;
+      }
     }
     &__button {
       display: flex;
       align-items: center;
       justify-content: center;
       text-decoration: none;
+      text-transform: uppercase;
       width: 270px;
       height: 70px;
       border-radius: 10px;
       background-color: $color-gray-10;
       color: $color-white;
       font-size: 24px;
+      &:hover {
+        background-color: $color-blue-1;
+      }
+    }
+    &__step {
+      padding: 40px;
+      margin: 0 auto;
+      max-width: 860px;
+      &-over-wrap {
+        width: 100%;
+        padding: 0 40px;
+        img {
+          width: 100%;
+        }
+      }
+      &-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 40px 0;
+        &-discuss {
+          width: 50%;
+          ul {
+            padding-left: 40px;
+            width: 300px;
+            margin: 0 auto;
+            li {
+              margin: 0 0 30px;
+              p {
+                font-size: 24px;
+                line-height: 30px;
+                letter-spacing: 0.06em;
+                padding: 0 0 10px;
+              }
+              a {
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+      &-text {
+        width: 50%;
+        p {
+          font-size: 24px;
+          line-height: 30px;
+          letter-spacing: 0.06em;
+          padding: 10px 0 0 40px;
+        }
+      }
+      &-flowimg {
+        position: absolute;
+        width: 50%;
+        top: 0;
+        right: 0;
+        img {
+          width: 100%;
+        }
+      }
+      &-title {
+        position: relative;
+        font-size: 48px;
+        font-weight: bold;
+        padding-left: 40px;
+        &:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          content: attr(data-step)'. ';
+          font-weight: normal;
+        }
+      }
     }
 
   }
 
   .team-section {
+    &__inner {
+      padding: 40px;
+      margin: 0 auto;
+      max-width: 860px;
+      text-align: center;
+    }
     &__title {
       display: flex;
-      align-items: center;
-      font-size: 48px;
-      line-height: 1;
+      align-items: baseline;
+      margin: 0 0 40px;
+      span {
+        font-size: 36px;
+        padding: 0 20px 0 0;
+        line-height: 1;
+      }
       img {
         margin: 0 0 0 10px;
         height: 48px;
       }
     }
     &__member {
-      width: 870px;
-      display: flex;
+      padding: 40px;
       margin: 0 auto;
+      max-width: 860px;
+      display: flex;
       li {
         display: flex;
         flex-direction: column;
@@ -141,4 +261,17 @@
     }
   }
 
+}
+.footer {
+  background: $color-gray-10;
+  color: $color-white;
+  &__inner {
+    padding: 40px 0 20px;
+    margin: 0 auto;
+    max-width: 860px;
+  }
+  .copy {
+    text-align: right;
+    padding: 0 20px 20px 0;
+  }
 }
