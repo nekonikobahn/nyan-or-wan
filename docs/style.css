@@ -272,6 +272,13 @@ body {
   letter-spacing: 0.06em;
   padding: 10px 0 0 40px;
 }
+.main .flow-section__step-text p.thanks {
+  text-align: right;
+  margin: -20px 0 0;
+}
+.main .flow-section__step-text p.thanks img {
+  width: 200px;
+}
 .main .flow-section__step-flowimg {
   position: absolute;
   width: 50%;
